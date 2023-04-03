@@ -1,4 +1,7 @@
 import './App.css'
+import "primereact/resources/themes/lara-light-indigo/theme.css";     
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
 import { useEffect, useState } from 'react'
 import { useDispatch,useSelector } from './components/hooks'
 import { getGallery, incrementPage,decrementPage } from './redux/GallerySlice'
@@ -6,7 +9,7 @@ import Filters from './components/Filters'
 import Loader from './components/Loader'
 import MyDialog from './components/MyDialog'
 import FullPost from './components/FullPost'
-
+import { Header } from './components/Header'
 
 function App() {
   const dispatch = useDispatch()
@@ -50,6 +53,7 @@ function App() {
   const postImages = getPostImages()
   return (
     <div className="">
+      <Header />
       <MyDialog dialogData={dialogData} setDialogData={setDialogData}>
         <FullPost post={dialogData} />
       </MyDialog>
@@ -67,7 +71,7 @@ function App() {
                     className="block object-cover object-center w-full h-full rounded-t-lg min-h-[150px] max-h-[400px]"
                     src={post?.link ?? ''}
                   />
-                  <div className="bg-[#474a51] py-2 px-3 text-white max-h-[150px]">
+                  <div className="bg-[#000000] py-2 px-3 text-white max-h-[150px]">
                     {post?.title ?? ''}
                   </div>
                 </div>
