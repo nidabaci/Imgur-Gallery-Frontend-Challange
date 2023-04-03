@@ -10,8 +10,10 @@ import Loader from './components/Loader'
 import MyDialog from './components/MyDialog'
 import FullPost from './components/FullPost'
 import { Header } from './components/Header'
+import { ImageCard } from './components/ImageCard';
 
 function App() {
+  
   const dispatch = useDispatch()
   const [dialogData,setDialogData]=useState(null);
 
@@ -41,7 +43,6 @@ function App() {
 
         return checkExtension
       })
-      // console.log({ imageData })
       if (imageData) {
         newGallery.push({ ...post, link: imageData?.link })
       }
@@ -49,7 +50,7 @@ function App() {
 
     return newGallery
   }
-
+ 
   const postImages = getPostImages()
   return (
     <div className="">
@@ -66,14 +67,7 @@ function App() {
             {postImages.map((post:any) => {
               return (
                 <div key={post?.id} className="flex flex-col" onClick={()=>{setDialogData(post)}}>
-                  <img
-                    alt="gallery"
-                    className="block object-cover object-center w-full h-full rounded-t-lg min-h-[150px] max-h-[400px]"
-                    src={post?.link ?? ''}
-                  />
-                  <div className="bg-[#000000] py-2 px-3 text-white max-h-[150px]">
-                    {post?.title ?? ''}
-                  </div>
+                  <ImageCard photo={post?.link ?? ''} description={post?.title ?? ''} />
                 </div>
               )
             })}
