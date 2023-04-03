@@ -62,7 +62,7 @@ function App() {
         <Loader />
       ) : (
         <div className="container px-5 py-2 mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-3 md:grid-cols-3 gap-6">
             {postImages.map((post:any) => {
               return (
                 <div key={post?.id} className="flex flex-col" onClick={()=>{setDialogData(post)}}>
