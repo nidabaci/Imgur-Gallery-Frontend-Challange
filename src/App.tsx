@@ -47,7 +47,6 @@ function App() {
         newGallery.push({ ...post, link: imageData?.link })
       }
     })
-
     return newGallery
   }
  
@@ -67,7 +66,12 @@ function App() {
             {postImages.map((post:any) => {
               return (
                 <div key={post?.id} className="flex flex-col" onClick={()=>{setDialogData(post)}}>
-                  <ImageCard photo={post?.link ?? ''} description={post?.title ?? ''} />
+                  <ImageCard 
+                  photo={post?.link ?? ''} 
+                  description={post?.title ?? ''} 
+                  score={post.score} 
+                  upvotes={post.ups} 
+                  views={post.views}/>
                 </div>
               )
             })}
