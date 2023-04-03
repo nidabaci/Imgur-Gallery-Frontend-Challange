@@ -16,7 +16,7 @@ const Filters = () => {
   )
 
   return (
-    <div className="mb-2 flex justify-center items-center">
+    <div className="mb-10 mt-10 flex justify-center items-center">
       <div className="h-[50px] w-[400px] mb-2 mx-4 flex justify-between items-center px-5 rounded-xl text-white bg-[#474a51]">
         <DropDown
           name="section"
