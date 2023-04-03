@@ -1,0 +1,68 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    .filter_button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-top: 30px;
+      margin-bottom: 30px;
+  
+      > div:first-child {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+  
+        .p-button {
+          background: none;
+          color: black;
+          border: none;
+          border-radius: 50px;
+  
+          &:active {
+            background: black;
+            color: white;
+            border-radius: 50px;
+          }
+          &:focus {
+            box-shadow: none;
+          }
+          &:focus-visible {
+            border: none;
+            border-radius: 50px;
+          }
+        }
+      }
+  
+      .trending_button {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+  
+        .p-button {
+          background: white;
+          color: rgb(40, 40, 40);
+          border: solid 2px rgb(181, 179, 179);
+          border-radius: 50px;
+  
+          &:active {
+            background: black;
+            color: white;
+            border-radius: 50px;
+          }
+          &:focus {
+            box-shadow: none;
+          }
+          &:focus-visible {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+  
+  
