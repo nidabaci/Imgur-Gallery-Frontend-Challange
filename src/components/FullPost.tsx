@@ -16,10 +16,6 @@ const FullPost = ({post}) => {
         <BiDownvote size={20} />
         {post.downs}
         </div>}
-        {/* <div className='flex gap-1 items-center'>
-        <BiUpvote size={30} />
-        {post?.ups ?? ""}
-        </div> */}
       </div>
       <div className="flex-col sm:w-90 md:w-[60%] overflow-y-scroll gap-2">
         <div className="text-xl mb-3">
