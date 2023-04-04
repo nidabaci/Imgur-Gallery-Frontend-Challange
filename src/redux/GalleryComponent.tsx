@@ -77,13 +77,6 @@ const galleryComponent=createSlice({
   },
 })
 
-
-export const sectionOptions: DropDownOptionType[] = [
-  { value: 'hot', label: 'Hot' },
-  { value: 'top', label: 'Top' },
-  { value: 'user', label: 'User' }
-]
-
 export const sortOptions: DropDownOptionType[] = [
   { value: 'viral', label: 'Viral' },
   { value: 'top', label: 'Top' },
@@ -98,6 +91,5 @@ export const windowOptions: DropDownOptionType[] = [
   { value: 'year', label: 'Year' }
 ]
 
-
-export const { setFilters,incrementPage,decrementPage } = galleryComponent.actions;
+export const { setFilters, incrementPage, decrementPage } = galleryComponent.actions;
 export default galleryComponent.reducer;

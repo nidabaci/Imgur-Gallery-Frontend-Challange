@@ -1,7 +1,8 @@
 import '../styles/filters.scss'
 import { Button } from 'primereact/button'
 import { useSelector, useDispatch } from '../components/hooks'
-import { setFilters } from '../redux/GalleryComponent'
+import { setFilters, sortOptions, windowOptions, } from '../redux/GalleryComponent'
+import DropDown from './DropDown'
 
 export const FiltersBar = () => {
   const dispatch = useDispatch()
@@ -19,15 +20,9 @@ export const FiltersBar = () => {
 
   return (
     <>
-      <div className="mb-10 mt-10 flex justify-center items-center filter_bar">
+      <div className="mb-5 mt-5 flex justify-center items-center filter_bar">
         <div className="container filter_button">
           <div>
-            <Button
-              className={section === 'top' ? 'active' : ''}
-              onClick={() => handleFilterClick('section', 'top')}
-            >
-              TOP
-            </Button>
             <Button
               className={section === 'hot' ? 'active' : ''}
               onClick={() => handleFilterClick('section', 'hot')}
@@ -35,11 +30,30 @@ export const FiltersBar = () => {
               HOT
             </Button>
             <Button
+              className={section === 'top' ? 'active' : ''}
+              onClick={() => handleFilterClick('section', 'top')}
+            >
+              TOP
+            </Button>
+            
+            <Button
               className={section === 'user' ? 'active' : ''}
               onClick={() => handleFilterClick('section', 'user')}
             >
               USERS
-            </Button>
+              </Button>
+            <DropDown
+            name="sort"
+            value={sort}
+            options={sortOptions}
+            onChange={(key, value) => dispatch(setFilters({ key, value }))}
+          />
+          <DropDown
+            name="window"
+            value={window}
+            options={windowOptions}
+            onChange={(key, value) => dispatch(setFilters({ key, value }))}
+          />
           </div>
           <div className="trending_button">
             <Button
