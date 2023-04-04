@@ -1,11 +1,12 @@
 import axios from "axios";
-const clientSecret="c388f0acbc78fa3807b60692d30393e9640573f8"
-const accessToken="9016bdae18c4421a666a86d39141a260924980cc"
-const clientId="1793135a7881f8a"
-const baseUrl="https://api.imgur.com/3"
 
-axios.defaults.headers.common["Authorization"] = `Bearer ${accessToken}`;
+const clientId="1c9f528903622cf"
+const clientSecret="96230025123de9a7d0c04605fb26c6ddaf2da1af"
+const accessToken="f3f535aa4e7fe7db123d6a2140b362f93206d240"
+
+const baseUrl="https://api.imgur.com/3"
 axios.defaults.baseURL ="https://api.imgur.com/3"
+axios.defaults.headers.common["Authorization"] = `Bearer ${accessToken}`;
 
 export const mainAxios = axios.create({
   baseUrl,
