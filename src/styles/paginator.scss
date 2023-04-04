@@ -1,0 +1,16 @@
+.paginator {
+    position: fixed;
+    top: 80%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.vertical_line {
+    border-left: 2px solid rgb(118, 118, 118);
+    height: 100px;
+    position:relative;
+    left: 50%;
+  
+}
