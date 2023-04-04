@@ -1,13 +1,7 @@
-import React from 'react'
 import '../styles/filters.scss'
 import { Button } from 'primereact/button'
 import { useSelector, useDispatch } from '../components/hooks'
-import {
-  setFilters,
-  sectionOptions,
-  sortOptions,
-  windowOptions,
-} from '../redux/GalleryComponent'
+import { setFilters } from '../redux/GalleryComponent'
 
 export const FiltersBar = () => {
   const dispatch = useDispatch()
@@ -22,6 +16,7 @@ export const FiltersBar = () => {
   const handleViralToggle = () => {
     dispatch(setFilters({ key: 'showViral', value: !showViral }))
   }
+
   return (
     <>
       <div className="mb-10 mt-10 flex justify-center items-center filter_bar">
@@ -51,7 +46,7 @@ export const FiltersBar = () => {
               className={showViral ? 'active' : ''}
               onClick={() => handleViralToggle()}
             >
-              TRENDING
+              SHOW VIRAL
             </Button>
            
           </div>
