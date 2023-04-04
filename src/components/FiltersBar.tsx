@@ -1,12 +1,12 @@
 import React from "react";
-import filters from "../assets/styles/filters.scss";
+import "../styles/filters.scss"
 import { Button } from "primereact/button";
 
-export const Filters = () => {
+export const FiltersBar = () => {
   return (
     <>
-      <div className="container">
-        <div className="filter_button">
+      <div className="mb-10 mt-10 flex justify-center items-center filter_bar">
+        <div className="container filter_button">
           <div>
             <Button>TOP</Button>
             <Button>HOT</Button>

@@ -11,6 +11,7 @@ import MyDialog from './components/MyDialog'
 import FullPost from './components/FullPost'
 import { Header } from './components/Header'
 import { ImageCard } from './components/ImageCard';
+import { FiltersBar } from './components/FiltersBar';
 
 function App() {
   
@@ -53,7 +54,8 @@ function App() {
   const postImages = getPostImages()
   return (
     <div className="">
-      <Header />
+      <Header /> 
+      <FiltersBar />
       <MyDialog dialogData={dialogData} setDialogData={setDialogData}>
         <FullPost post={dialogData} />
       </MyDialog>
@@ -61,8 +63,8 @@ function App() {
       {pageLoading ? (
         <Loader />
       ) : (
-        <div className="container px-5 py-2 mx-auto">
-          <div className="grid grid-cols-3 md:grid-cols-3 gap-6">
+        <div className="container px-5 mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {postImages.map((post:any) => {
               return (
                 <div key={post?.id} className="flex flex-col" onClick={()=>{setDialogData(post)}}>
@@ -76,6 +78,7 @@ function App() {
               )
             })}
           </div>
+         
           <div className='flex gap-2 justify-end mt-4 pt-4 border-t-2 text-white'>
               <button onClick={()=>{dispatch(decrementPage());window.scrollTo(0, 0)}} className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">Previous</button>
               <button onClick={()=>{dispatch(incrementPage());window.scrollTo(0, 0)}} className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">Next</button>
