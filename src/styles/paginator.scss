@@ -7,10 +7,15 @@
     flex-direction: column;
 }
 
+@media screen and (max-width: 640px) {
+    .paginator {
+      top: 80%;
+    }
+  }
+
 .vertical_line {
     border-left: 2px solid rgb(118, 118, 118);
     height: 100px;
     position:relative;
     left: 50%;
-  
 }
