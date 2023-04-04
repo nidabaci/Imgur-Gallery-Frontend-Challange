@@ -4,7 +4,7 @@ import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import { useEffect, useState } from 'react'
 import { useDispatch,useSelector } from './components/hooks'
-import { getGallery } from './redux/GallerySlice'
+import { getGallery } from './redux/GalleryComponent'
 import Loader from './components/Loader'
 import MyDialog from './components/MyDialog'
 import FullPost from './components/FullPost'

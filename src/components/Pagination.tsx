@@ -1,7 +1,7 @@
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from 'react-icons/ai'
 import { useDispatch, useSelector } from '../components/hooks'
 import { RootState } from '../redux/index'
-import { incrementPage, decrementPage } from '../redux/GallerySlice'
+import { incrementPage, decrementPage } from '../redux/GalleryComponent'
 import '../styles/paginator.scss'
 
 export const Pagination = () => {

@@ -7,7 +7,7 @@ import {
   sectionOptions,
   sortOptions,
   windowOptions,
-} from '../redux/GallerySlice'
+} from '../redux/GalleryComponent'
 
 export const FiltersBar = () => {
   const dispatch = useDispatch()

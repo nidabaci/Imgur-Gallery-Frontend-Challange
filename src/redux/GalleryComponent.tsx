@@ -26,7 +26,7 @@ const initialState:InitialStateInterface = {
 }
 
 
-const gallerySlice=createSlice({
+const galleryComponent=createSlice({
   name:"gallery",
   initialState:initialState,
   reducers:{
@@ -99,5 +99,5 @@ export const windowOptions: DropDownOptionType[] = [
 ]
 
 
-export const { setFilters,incrementPage,decrementPage } = gallerySlice.actions;
-export default gallerySlice.reducer;
+export const { setFilters,incrementPage,decrementPage } = galleryComponent.actions;
+export default galleryComponent.reducer;
