@@ -1,7 +1,11 @@
 import '../styles/filters.scss'
 import { Button } from 'primereact/button'
 import { useSelector, useDispatch } from '../components/hooks'
-import { setFilters, sortOptions, windowOptions, } from '../redux/GalleryComponent'
+import {
+  setFilters,
+  sortOptions,
+  windowOptions,
+} from '../redux/GalleryComponent'
 import DropDown from './DropDown'
 
 export const FiltersBar = () => {
@@ -35,25 +39,25 @@ export const FiltersBar = () => {
             >
               TOP
             </Button>
-            
+
             <Button
               className={section === 'user' ? 'active' : ''}
               onClick={() => handleFilterClick('section', 'user')}
             >
               USERS
-              </Button>
+            </Button>
             <DropDown
-            name="sort"
-            value={sort}
-            options={sortOptions}
-            onChange={(key, value) => dispatch(setFilters({ key, value }))}
-          />
-          <DropDown
-            name="window"
-            value={window}
-            options={windowOptions}
-            onChange={(key, value) => dispatch(setFilters({ key, value }))}
-          />
+              name="sort"
+              value={sort}
+              options={sortOptions}
+              onChange={(key, value) => dispatch(setFilters({ key, value }))}
+            />
+            <DropDown
+              name="window"
+              value={window}
+              options={windowOptions}
+              onChange={(key, value) => dispatch(setFilters({ key, value }))}
+            />
           </div>
           <div className="trending_button">
             <Button
@@ -62,7 +66,6 @@ export const FiltersBar = () => {
             >
               SHOW VIRAL
             </Button>
-           
           </div>
         </div>
       </div>

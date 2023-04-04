@@ -1,10 +1,9 @@
 import { Dialog, Transition } from '@headlessui/react'
-import { Fragment, useState } from 'react'
+import { Fragment } from 'react'
 
 export default function MyModal({dialogData,setDialogData,title=null,children}) {
   return (
     <>
-
       <Transition appear show={!!dialogData} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={()=>setDialogData(null)}>
           <Transition.Child
