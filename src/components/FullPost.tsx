@@ -2,7 +2,6 @@ import { BiUpvote, BiDownvote, BiHeart } from 'react-icons/bi'
 import { AiOutlineEye, AiOutlineComment } from 'react-icons/ai'
 
 const FullPost = ({ post }) => {
-  console.log(post)
   return (
     <div className="flex w-full h-full gap-16 justify-center text-white font-normal">
       <div className="my-auto absolute bottom-10 flex md:flex flex-row md:flex-col items-center justify-center md:relative gap-2 px-3 py-2 md-py-5 border bg-[rgba(39,41,45,0.5)] md:bg-transparent border-gray-400 rounded-md custom-scroll-bar">
