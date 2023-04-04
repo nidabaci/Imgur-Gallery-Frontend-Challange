@@ -8,7 +8,15 @@
     color: white;
 }
 
-.card_buttons .p-button.p-button-text{
+.p-button.p-button-text{
     color: white;
     padding-left: 0;
+}
+.p-button.p-button-text:active, .p-button.p-button-text:enabled:hover{
+   color: rgb(153, 153, 153);
+   background: none;
+}
+
+.card_buttons .p-button:focus{
+    box-shadow: none;
 }
