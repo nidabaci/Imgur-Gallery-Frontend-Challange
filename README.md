@@ -17,7 +17,9 @@ When a user clicks on an image, the application shows its details such as the bi
 ### Usage
 
 To start the server, run the following command:
+
 [ npm run dev ]
+
 Then open the network URL from the console.
 
 ## Built With
