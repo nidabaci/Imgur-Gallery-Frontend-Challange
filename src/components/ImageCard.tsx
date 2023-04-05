@@ -9,7 +9,7 @@ export const ImageCard = ({photo, description, score, upvotes, views}) => {
     return (
       <div className="p-col-4 p-md-4">
         <div className="card justify-content-center">
-          <Card header={header} className="md:w-25rem">
+          <Card header={header} className="md:w-25rem p-1px bg-gray">
             <p className="m-0 text-left">{description}</p>
             <div className="card_buttons">
               <Button label={upvotes} icon="pi pi-arrow-up" text />
