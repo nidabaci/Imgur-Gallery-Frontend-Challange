@@ -1,4 +1,4 @@
-## Imgur Gallery Challange
+## Imgur Gallery Challange 🖼
 
 ### Introduction
 This project is a responsive web application that consumes the Imgur API to display gallery images in a grid of thumbnails. The user can select the gallery section from hot, top, and user, and can include or exclude viral images from the result set. Additionally, the user can specify window and sort parameters. 
