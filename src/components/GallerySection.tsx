@@ -1,4 +1,3 @@
-import React from 'react'
 import { useEffect, useState } from 'react'
 import { useDispatch,useSelector } from '../components/hooks'
 import { getGallery } from '../redux/GalleryComponent'
@@ -6,6 +5,7 @@ import Loader from '../components/Loader'
 import MyDialog from '../components/MyDialog'
 import FullPost from '../components/FullPost'
 import { ImageCard } from './ImageCard'
+import "../styles/gallery.scss"
 
 export const GallerySection = () => {
     const dispatch = useDispatch()
@@ -46,29 +46,27 @@ export const GallerySection = () => {
  
   const postImages = getPostImages()
   return (
-    <div className="">
-      
+    <div>
       <MyDialog dialogData={dialogData} setDialogData={setDialogData}>
         <FullPost post={dialogData} />
       </MyDialog>
       {pageLoading ? (
         <Loader />
       ) : (
-        <div className="container px-5 mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="container masonry px-5 mx-auto">
             {postImages.map((post:any) => {
               return (
-                <div key={post?.id} className="flex flex-col" onClick={()=>{setDialogData(post)}}>
+                <div key={post?.id} className="flex flex-col " onClick={()=>{setDialogData(post)}}>
                   <ImageCard 
                   photo={post?.link ?? ''} 
                   description={post?.title ?? ''} 
                   score={post.score} 
                   upvotes={post.ups} 
-                  views={post.views}/>
+                  views={post.views}
+                  />
                 </div>
               )
             })}
-          </div>
         </div>
       )}
     </div>

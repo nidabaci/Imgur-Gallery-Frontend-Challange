@@ -3,7 +3,7 @@ import { AiOutlineEye, AiOutlineComment } from 'react-icons/ai'
 
 const IconWithText = ({ icon, value }) => {
   return (
-    <div className="flex gap-1 items-center mb-3">
+    <div className="flex flex-wrap gap-1 items-center mb-3">
       {icon}
       {value}
     </div>

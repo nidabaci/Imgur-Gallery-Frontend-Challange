@@ -1,0 +1,25 @@
+/* The Masonry Container */
+.masonry {
+  width: 1500px;
+  margin: 20px auto;
+  columns: 4;
+  column-gap: 10px;
+
+  }
+  
+  /* The Masonry Brick */
+  .card {
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 768px) {
+    /* apply these styles when the screen width is 768px or smaller */
+    .masonry {
+      width: 100%;
+      columns: 1;
+    }
+  }

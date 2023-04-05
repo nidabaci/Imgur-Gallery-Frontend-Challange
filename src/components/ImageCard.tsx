@@ -8,7 +8,7 @@ export const ImageCard = ({photo, description, score, upvotes, views}) => {
     const header = <img alt="Card" src={photo} />;
     return (
       <div className="p-col-4 p-md-4">
-        <div className="card flex justify-content-center">
+        <div className="card justify-content-center">
           <Card header={header} className="md:w-25rem">
             <p className="m-0 text-left">{description}</p>
             <div className="card_buttons">
