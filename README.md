@@ -31,5 +31,5 @@ Then open the network URL from the console.
 - [Tailwind](https://tailwindcss.com/) - CSS framework
 
 
-##References
+## References
 Imgur API Documentation (https://apidocs.imgur.com/)
