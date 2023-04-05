@@ -12,7 +12,7 @@ When a user clicks on an image, the application shows its details such as the bi
 
 
 ### Demo
-[Click Here to see demo](insert-link-here)
+[Click Here to see demo](https://frabjous-beignet-8de4b1.netlify.app/)
 
 ### Usage
 
