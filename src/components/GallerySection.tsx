@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useDispatch,useSelector } from '../components/hooks'
 import { getGallery } from '../redux/GalleryComponent'
 import Loader from '../components/Loader'
@@ -21,7 +21,7 @@ export const GallerySection = () => {
     dispatch(getGallery())
   }, [filters])
 
-  const getPostImages = () => {
+  const postImages = useMemo(() => {
     if (photos.length == 0) return []
     let newGallery = [] as any
 
@@ -42,9 +42,8 @@ export const GallerySection = () => {
       }
     })
     return newGallery
-  }
+  },[photos])
  
-  const postImages = getPostImages()
   return (
     <div>
       <MyDialog dialogData={dialogData} setDialogData={setDialogData}>
